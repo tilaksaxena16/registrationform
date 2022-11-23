@@ -1,17 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { Header } from './Header/Header';
+import { Pagename } from './Pagename/Pagename';
+import { Fullname } from './Fullname/Fullname';
+import { Input } from './Input/Input';
+import { Pagebutton } from './Pagebutton/Pagebutton';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <>
+    <Header></Header>
+    <div className='page-layout'>
+      <Pagename></Pagename>
+      <Fullname name="Full name"></Fullname>
+      <Input></Input>
+      <Fullname name="Email address"></Fullname>
+      <Input></Input>
+      <Fullname name="Password"></Fullname>
+      <Input></Input>
+      <div className='flex'>
+        <Pagebutton></Pagebutton>
+      </div>
+    </div>
+  </>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
